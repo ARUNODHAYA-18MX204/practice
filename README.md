@@ -1,2 +1,0 @@
-# practice
-Practice_JavaScript
