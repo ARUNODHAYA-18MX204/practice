@@ -341,5 +341,18 @@ function Person(first, last, age, eye) {
 
 console.log("Map2"); 
 console.log(map2); 
+//destructuring objects
+var des={
+    name1:"aruna",
+    age1:9
+    
+};
+let {name1,age1}= des;
+console.log(name1+age1);
+//destructuring array
+var arr_des=["hello","world",1,2,3,4,5,6,7,8,9];
+var [aa,bb,...numbers]=arr_des;
+console.log(aa,bb);
+console.log(numbers);
 
 
