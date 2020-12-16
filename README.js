@@ -1,4 +1,4 @@
-//***************BASIC PROGRAMS***************
+//**********************************************************BASIC PROGRAMS*************************************************************************************************************
 
 
 
@@ -248,3 +248,98 @@ fruits.splice(2,2);//(starting_position,number of elementsdeleting using splice
 console.log(fruits);
 //toString()-->default ',' separatorconverts array to string link join
 console.log(fruits.toString());
+//difference between join and toString is in join we can change the default separator.
+
+
+
+
+//Array of objects
+var array_of_objects=[{
+    "Name":"Aruna",
+    "Id":101
+
+},{
+    "Name":"Geetha",
+    "Id":102
+},{
+    "Name":"Priya",
+    "Id":103
+}];
+//Accessing
+console.log(array_of_objects.findIndex(function(elements)
+{
+if(elements.Name==="Priya")
+{
+    console.log(elements.Name+" "+"Is present");
+}
+}));
+
+
+
+
+//functions,objects,prototyping,maps,sets,closure
+/*function greet()
+{
+    document.getElementById("demo").innerHTML="HELLO ARUNA";
+
+}
+*/
+/*console.log(123+"3"+9);
+
+var myobj={
+    "name":"aruna",
+    "age":"23",
+    "address":1
+}
+console.log (myobj["address"]);*/
+
+function CreateEmployee(Name,Id,DOJ)
+{
+    var newEmployee={};
+    newEmployee.Name=Name;
+    newEmployee.Id=Id;
+    newEmployee.DOJ=DOJ;
+    return newEmployee;
+
+}
+var emp1=CreateEmployee("Aruna",204,"14.12.2020");
+console.log(emp1);
+
+
+function CreateEmployeeAsConstructor(Name,Id,DOJ)
+{
+    this.Name=Name;
+    this.Id=Id;
+    this.DOJ=DOJ;
+
+    
+
+};
+CreateEmployeeAsConstructor.prototype.name1=function()
+{
+    return this.Name;
+
+}
+var emp2=new CreateEmployeeAsConstructor("Thulir",200,"14.12.2020");
+console.log(emp2.name1());
+
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+  }
+  
+  Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName
+  };
+  
+  var myFather = new Person("John", "Doe", 50, "blue");
+  var map2 = new Map([["firstname" ,"sumit"],  
+  ["lastname", "ghosh"], ["website", "geeksforgeeks"]]); 
+
+console.log("Map2"); 
+console.log(map2); 
+
+
